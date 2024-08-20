@@ -103,8 +103,9 @@ class MFLike(InstallableLikelihood):
             # Initialize template for marginalization, if needed
             self._init_template_from_file()
 
-        self.rotation = syslib_mflike.Rotation_alm(ell=self.l_bpws, nu=self.experiments,
-                                                  requested_cls=self.requested_cls)
+        self.rotation = syslib_mflike.Rotation_alm(
+            ell=self.l_bpws, nu=self.experiments, cls=self.requested_cls, spectra=self.data_vec
+        )
 
         self._constant_nuisance: Optional[dict] = None
         self.log.info("Initialized!")
