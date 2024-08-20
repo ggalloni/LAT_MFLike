@@ -2,6 +2,7 @@ name: Testing & coverage
 
 on:
   pull_request:
+    branches: [syslib-fix]
   push:
     branches: [master]
 
