@@ -3,7 +3,7 @@ name: Testing tutorial notebooks
 on:
   pull_request:
   push:
-    branches: [master]
+    branches: [master, syslib-fix]
 
 jobs:
   build:
